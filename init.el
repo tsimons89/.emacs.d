@@ -6,8 +6,7 @@
 (package-initialize)
 
 (server-start)
-(setq tab-width 4)
-(linum-mode)
-(global-set-key (kbd "C-'") 'comment-line)
-(global-set-key (kbd "<C-tab>") 'ido-switch-buffer)
-(electric-pair-mode)
+(load "~/.emacs.d/init/init_packages.el")
+(load "~/.emacs.d/init/behavior.el")
+(load "~/.emacs.d/init/appearance.el")
+(load "~/.emacs.d/init/keybind.el")
