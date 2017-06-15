@@ -1,2 +1,5 @@
 (setq tab-width 4)
 (electric-pair-mode)
+(require 'ido)
+(ido-mode t)
+(setq case-fold-search nil)
