@@ -1,5 +1,22 @@
 (package-initialize)
 
+(add-to-list 'package-archives
+       '("melpa" . "http://melpa.org/packages/") t)
+
+(package-initialize)
+(when (not package-archive-contents)
+  (package-refresh-contents))
+
+(defvar myPackages
+  '(better-defaults
+    elpy))
+
+(mapc #'(lambda (package)
+    (unless (package-installed-p package)
+      (package-install package)))
+      myPackages)
+
+
 (add-to-list `custom-theme-load-path "~/.emacs.d/themes/")
 
 (custom-set-variables
