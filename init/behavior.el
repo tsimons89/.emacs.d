@@ -3,3 +3,4 @@
 (require 'ido)
 (ido-mode t)
 (setq case-fold-search nil)
+(setq python-shell-completion-native-enable nil)

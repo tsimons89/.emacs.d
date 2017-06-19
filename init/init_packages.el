@@ -1,20 +1,19 @@
-(package-initialize)
-
-(add-to-list 'package-archives
-       '("melpa" . "http://melpa.org/packages/") t)
+(require 'package)
+(add-to-list 'package-archives '("melpa" . "http://melpa.org/packages/"))
 
 (package-initialize)
-(when (not package-archive-contents)
+(unless package-archive-contents
   (package-refresh-contents))
 
-(defvar myPackages
+(setq my-packages
   '(better-defaults
+    smart-mode-line
+    smart-mode-line-powerline-theme
     elpy))
 
-(mapc #'(lambda (package)
+(dolist (package my-packages)
     (unless (package-installed-p package)
       (package-install package)))
-      myPackages)
 
 
 (add-to-list `custom-theme-load-path "~/.emacs.d/themes/")
