@@ -17,7 +17,7 @@
  ;; If there is more than one, they won't work right.
  '(custom-safe-themes
    (quote
-    ("84d2f9eeb3f82d619ca4bfffe5f157282f4779732f48a5ac1484d94d5ff5b279" "4528fb576178303ee89888e8126449341d463001cb38abe0015541eb798d8a23" default)))
+    ("a27c00821ccfd5a78b01e4f35dc056706dd9ede09a8b90c6955ae6a390eb1c1e" "84d2f9eeb3f82d619ca4bfffe5f157282f4779732f48a5ac1484d94d5ff5b279" "4528fb576178303ee89888e8126449341d463001cb38abe0015541eb798d8a23" default)))
  '(package-selected-packages
    (quote
     (org-bullets smart-mode-line-powerline-theme smart_mode_line elpy))))

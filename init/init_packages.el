@@ -34,3 +34,5 @@
  ;; If there is more than one, they won't work right.
  )
 (elpy-enable)
+(sml/setup)
+(sml/apply-theme 'powerline)
