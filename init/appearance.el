@@ -4,3 +4,7 @@
 (tool-bar-mode -1)
 (global-linum-mode t)
 (load-theme 'zenburn t)
+
+
+;; make org mode look better
+(setq org-hide-emphasis-markers t)
