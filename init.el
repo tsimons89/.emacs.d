@@ -3,13 +3,31 @@
 ;; installed packages.  Don't delete this line.  If you don't want it,
 ;; just comment it out by adding a semicolon to the start of the line.
 ;; You may delete these explanatory comments.
+(require 'package)
+(add-to-list 'package-archives '("melpa" . "http://melpa.org/packages/"))
+
 (package-initialize)
+(unless package-archive-contents
+  (package-refresh-contents))
+
+(setq my-packages
+  '(better-defaults
+    smart-mode-line
+    smart-mode-line-powerline-theme
+    gnuplot
+    orgtbl-ascii-plot
+    elpy))
+
+(dolist (package my-packages)
+    (unless (package-installed-p package)
+      (package-install package)))
 
 (server-start)
-(load "~/.emacs.d/init/init_packages.el")
-(load "~/.emacs.d/init/behavior.el")
-(load "~/.emacs.d/init/appearance.el")
-(load "~/.emacs.d/init/keybind.el")
+;; (load "~/.emacs.d/init/init_packages.el")
+
+(add-to-list `custom-theme-load-path "~/.emacs.d/themes/")
+
+
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -27,3 +45,9 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  )
+(elpy-enable)
+(sml/setup)
+(sml/apply-theme 'powerline)
+(load "~/.emacs.d/init/behavior.el")
+(load "~/.emacs.d/init/appearance.el")
+(load "~/.emacs.d/init/keybind.el")
