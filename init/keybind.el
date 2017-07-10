@@ -5,4 +5,3 @@
 
 ;;org mode
 (global-set-key (kbd "<f9>") 'my-org-agenda)
-(define-key org-mode-map (kbd "C-c a") 'org-agenda)

@@ -1015,8 +1015,8 @@ Also bind `class' to ((class color) (min-colors 89))."
    `(org-agenda-structure
      ((t (:inherit font-lock-comment-face))))
    `(org-archived ((t (:foreground ,zenburn-fg :weight bold))))
-   `(org-checkbox ((t (:background ,zenburn-bg+2 :foreground ,zenburn-fg+1
-                                   :box (:line-width 1 :style released-button)))))
+   ;; `(org-checkbox ((t (:background ,zenburn-bg+2 :foreground ,zenburn-fg+1
+   ;;                                 :box (:line-width 1 :style released-button)))))
    `(org-date ((t (:foreground ,zenburn-blue :underline t))))
    `(org-deadline-announce ((t (:foreground ,zenburn-red-1))))
    `(org-done ((t (:weight bold :weight bold :foreground ,zenburn-green+3))))

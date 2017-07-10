@@ -49,5 +49,6 @@
 (sml/setup)
 (sml/apply-theme 'powerline)
 (load "~/.emacs.d/init/behavior.el")
+(load "~/.emacs.d/init/org_prefs.el")
 (load "~/.emacs.d/init/appearance.el")
 (load "~/.emacs.d/init/keybind.el")
